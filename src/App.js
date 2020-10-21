@@ -1,16 +1,23 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
 
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-import 'firebase/analytics';
+  import firebase from 'firebase/app';
+  import 'firebase/firestore';
+  import 'firebase/auth';
+  import 'firebase/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  // your config
+  apiKey: "AIzaSyC0tjou2NH699gTR9tejh3mgIqLx_j4Dzg",
+  authDomain: "fir-chat-ac940.firebaseapp.com",
+  databaseURL: "https://fir-chat-ac940.firebaseio.com",
+  projectId: "fir-chat-ac940",
+  storageBucket: "fir-chat-ac940.appspot.com",
+  messagingSenderId: "39202856418",
+  appId: "1:39202856418:web:f7be2beab88ece0500edbb",
+  measurementId: "G-DPG929JN4L"
 })
 
 const auth = firebase.auth();
@@ -25,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1>Realtime firebase chat</h1>
         <SignOut />
       </header>
 
@@ -47,7 +54,7 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
+      <p>lab 3-4 SCC Kukureko D.</p>
     </>
   )
 
